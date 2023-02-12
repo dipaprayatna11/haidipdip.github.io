@@ -49,35 +49,36 @@
       <h2 class="text-center mt-3">Isi Data Pendaftar</h2>
       <div class="row">
         <div class="col-center">
-          <form method="POST" action="">
+          <!-- FORM -->
+          <form name="submit-to-google-sheet">
             <!-- DATA DIRI -->
             <div class="card mt-3">
               <h5 class="card-header text-light text-start" style="background-color: #269222">A. Data Diri</h5>
-              <div class="card-body">
+              <diva class="card-body">
                 <!-- Nama Lengkap -->
                 <div class="form-group text-start">
                   <label>Nama Lengkap</label>
-                  <input type="text" name="xnama" class="form-control" placeholder="Masukkan Nama Lengkap" required />
+                  <input type="text" name="namalengkap" class="form-control" placeholder="Masukkan Nama Lengkap" required />
                 </div>
                 <!-- TTL -->
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-group text-start mt-2">
                       <label>Tempat Lahir</label>
-                      <input type="text" name="xTL" class="form-control" placeholder="Masukkan Tempat Lahir" required />
+                      <input type="text" name="tempatlahir" class="form-control" placeholder="Masukkan Tempat Lahir" required />
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="form-group text-start mt-2">
                       <label>Tanggal Lahir</label>
-                      <input type="date" name="xdate" class="form-control" required />
+                      <input type="date" name="tanggallahir" class="form-control" required />
                     </div>
                   </div>
                 </div>
                 <!-- Jenis Kelamin -->
                 <div class="form-group text-start mt-2">
                   <label>Jenis Kelamin</label>
-                  <select class="form-control" name="xkelamin" required>
+                  <select class="form-control" name="jeniskelamin" required>
                     <option selected>Pilih Jenis Kelamin</option>
                     <option>Laki - Laki</option>
                     <option>Perempuan</option>
@@ -86,7 +87,7 @@
                 <!-- Agama -->
                 <div class="form-group text-start mt-2">
                   <label>Agama</label>
-                  <select class="form-control" name="xagama" required>
+                  <select class="form-control" name="agama" required>
                     <option selected>Pilih Agama</option>
                     <option>Hindu</option>
                     <option>Islam</option>
@@ -99,29 +100,29 @@
                 <!-- Alamat Asal -->
                 <div class="form-group text-start mt-2">
                   <label>Alamat Asal</label>
-                  <textarea class="form-control" name="xAA" placeholder="Masukkan Alamat" required></textarea>
+                  <textarea class="form-control" name="alamatasal" placeholder="Masukkan Alamat" required></textarea>
                 </div>
                 <!-- Asal Sekolah -->
                 <div class="form-group text-start mt-2">
                   <label>Asal Sekolah</label>
-                  <input type="text" name="xasalS" class="form-control" placeholder="Masukkan Asal Sekolah" required />
+                  <input type="text" name="asalsekolah" class="form-control" placeholder="Masukkan Asal Sekolah" required />
                 </div>
                 <!-- Alamat Sekolah -->
                 <div class="form-group text-start mt-2">
                   <label>Alamat Sekolah</label>
-                  <textarea class="form-control" name="xalamatS" placeholder="Masukkan Alamat Sekolah" required></textarea>
+                  <textarea class="form-control" name="alamatsekolah" placeholder="Masukkan Alamat Sekolah" required></textarea>
                 </div>
                 <!-- Tahun Lulus -->
                 <div class="form-group text-start mt-2">
                   <label>Tahun Lulus</label>
-                  <input type="text" name="xTL" class="form-control" placeholder="" required />
+                  <input type="text" name="tahunlulus" class="form-control" placeholder="" required />
                 </div>
                 <!-- No Telepon -->
                 <div class="form-group text-start mt-2">
                   <label>No Telepon/HP</label>
-                  <input type="text" name="xHP" class="form-control" placeholder="" required />
+                  <input type="text" name="nohp" class="form-control" placeholder="" required />
                 </div>
-              </div>
+              </diva>
             </div>
             <!-- End Data Diri -->
 
@@ -132,17 +133,17 @@
                 <!-- Nama Ibu -->
                 <div class="form-group text-start">
                   <label>Nama Ibu</label>
-                  <input type="text" name="xnamaibu" class="form-control" placeholder="Masukkan Nama Ibu Kandung" required />
+                  <input type="text" name="namaibu" class="form-control" placeholder="Masukkan Nama Ibu Kandung" required />
                 </div>
                 <!-- Alamat Orang Tua/Wali -->
                 <div class="form-group text-start mt-2">
                   <label>Alamat Orang Tua/Wali</label>
-                  <textarea class="form-control" name="xalamatortu" placeholder="Masukkan Alamat Orang Tua/Wali" required></textarea>
+                  <textarea class="form-control" name="alamatortu" placeholder="Masukkan Alamat Orang Tua/Wali" required></textarea>
                 </div>
                 <!-- No Telepon Orang Tua -->
                 <div class="form-group text-start mt-2">
                   <label>No Telepon Orang Tua</label>
-                  <input type="text" name="xHPortu" class="form-control" placeholder="" required />
+                  <input type="text" name="hportu" class="form-control" placeholder="" required />
                 </div>
               </div>
             </div>
@@ -155,58 +156,68 @@
                 <!-- Pilihan 1 -->
                 <div class="form-group text-start">
                   <label>Pilihan 1</label>
-                  <input type="text" name="xP1" class="form-control" placeholder="" required />
+                  <input type="text" name="pilihan1" class="form-control" placeholder="" required />
                 </div>
                 <!-- Pilihan 2 -->
                 <div class="form-group text-start mt-2">
                   <label>Pilihan 2</label>
-                  <input type="text" name="xP2" class="form-control" placeholder="" />
+                  <input type="text" name="pilihan2" class="form-control" placeholder="" />
                 </div>
                 <!-- Pilihan 3 -->
                 <div class="form-group text-start mt-2">
                   <label>Pilihan 3</label>
-                  <input type="text" name="xP3" class="form-control" placeholder="" />
+                  <input type="text" name="pilihan3" class="form-control" placeholder="" />
                 </div>
               </div>
             </div>
             <!-- End Pilihan Sekolah -->
 
             <!-- Rekomendasi -->
-            <div class="card mt-2">
+            <div class="card mt-2 mb-3">
               <h5 class="card-header text-light text-start" style="background-color: #269222">D. Rekomandasi</h5>
               <div class="card-body">
                 <!-- Media -->
                 <div class="form-group text-start">
                   <label>Brosur/Pamflet/Baliho/Media Sosial (FB, WA, IG, WEB)</label>
-                  <input type="text" name="xmedia" class="form-control" placeholder="Isi salah satu" required />
+                  <input type="text" name="media" class="form-control" placeholder="Isi salah satu" required />
                 </div>
                 <!-- Perekomendasi -->
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-group text-start mt-2">
                       <label>Teman/Guru/Keluarga</label>
-                      <input type="text" name="xsiapa" class="form-control" placeholder="Isi salah satu" required />
+                      <input type="text" name="jenisrekomendasi" class="form-control" placeholder="Isi salah satu" required />
                     </div>
                   </div>
 
                   <div class="col-md-6">
                     <div class="form-group text-start mt-2">
                       <label>Nama Perekomendasi</label>
-                      <input type="text" name="xnamanya" class="form-control" placeholder="Isi nama yang mengajak" required />
+                      <input type="text" name="namarekomendasi" class="form-control" placeholder="Isi nama yang mengajak" required />
                     </div>
                   </div>
                 </div>
                 <!-- No Telephone Perekomendasi -->
                 <div class="form-group text-start mt-2">
                   <label>No Telephone/HP</label>
-                  <input type="text" name="xHPnya" class="form-control" placeholder="Isi No Telephone/HP yang mengajak" required />
+                  <input type="text" name="hprekomendasi" class="form-control" placeholder="Isi No Telephone/HP yang mengajak" required />
                 </div>
               </div>
             </div>
             <!-- End Rekomendasi -->
+
+            <!-- Message Alert -->
+            <div class="alert alert-success alert-dismissible fade show d-none my-alert" role="alert">
+              <strong>Data Terkirim!</strong> Anda sudah berhasil mendaftar.
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+
             <!-- Button -->
-            <button type="submit" class="btn btn-success mt-3 mb-3">Submit</button>
-            <button type="reset" class="btn btn-danger mt-3 mb-3">Reset</button>
+            <button type="submit" class="btn btn-success mb-3 btn-kirim">KIRIM</button>
+            <button class="btn btn-primary btn-loading d-none" type="button" disabled>
+              <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+              Loading...
+            </button>
             <!-- End Button -->
           </form>
         </div>
@@ -222,5 +233,33 @@
 
     <!-- My JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+    <script>
+      const scriptURL = "https://script.google.com/macros/s/AKfycbxp1R3Hqoo0CFoubLvkLVj0QCoNgQKGsnZDxEM6X5LKIoQvsSIJgWGQiBImhfnDSywQ/exec";
+      const form = document.forms["submit-to-google-sheet"];
+      const btnKirim = document.querySelector(".btn-kirim");
+      const btnLoading = document.querySelector(".btn-loading");
+      const myAlert = document.querySelector(".my-alert");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        // Saat Tombol Kirim Diklik
+        // Tampilkan tombol Loading, Hilangkan tombol Kirim
+        btnLoading.classList.toggle("d-none");
+        btnKirim.classList.toggle("d-none");
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            // Tampilkan tombol kirim, Hilangkan tombol loading
+            btnLoading.classList.toggle("d-none");
+            btnKirim.classList.toggle("d-none");
+            // Tambilkan Alert
+            myAlert.classList.toggle("d-none");
+            // Reset form Alert
+            form.reset();
+            console.log("Success!", response);
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
   </body>
 </html>
