@@ -7,65 +7,11 @@
     <title>Data Pendaftar</title>
   </head>
   <body>
-    <div class="container">
-      <h1 class="text-center my-5">Data Pendaftar</h1>
-      <table class="table table-striped">
-        <thead>
-          <tr>
-            <th>Nama Lengkap</th>
-            <th>Tempat Lahir</th>
-            <th>Tanggal Lahir</th>
-            <th>Jenis Kelamin</th>
-            <th>Alamat Asal</th>
-            <th>Asal Sekolah</th>
-          </tr>
-        </thead>
-        <tbody id="data-table">
-          <!-- Data akan dimuat di sini -->
-        </tbody>
-      </table>
+    <div class="container-fluid ratio ratio-16x9">
+      <iframe
+        class="justify-content-center"
+        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS3zZ6mIh3YZnDrLo39kheuBt4oUbcKKiy0UOQNW42XFQObTknph8Bg3gEcoRrY4bSEprrQnUPpvnf5/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"
+      ></iframe>
     </div>
-    <script>
-      // URL API Google Sheets
-      const API_URL = "https://script.google.com/macros/s/AKfycbxsEC8Hfc-uCNsZ45-6-c3_GVbpzrTb89CPkAS30eXEo0nLVMFeh2_18S6i4V3gi9yTDQ/exec";
-
-      // Fungsi untuk memuat data dari API
-      const loadData = async () => {
-        try {
-          const response = await fetch(API_URL);
-          const data = await response.json();
-          const rows = data.feed.entry;
-          let html = "";
-
-          // Loop untuk setiap baris data
-          rows.forEach((row) => {
-            const namalengkap = row.gsx$namalengkap.$t;
-            const tempatlahir = row.gsx$tempatlahir.$t;
-            const tanggallahir = row.gsx$tanggallahir.$t;
-            const jeniskelamin = row.gsx$jeniskelamin.$t;
-            const alamatasal = row.gsx$alamatasal.$t;
-            const asalsekolah = row.gsx$asalsekolah.$t;
-            html += `
-            <tr>
-              <td>${namalengkap}</td>
-              <td>${tempatlahir}</td>
-              <td>${tanggallahir}</td>
-              <td>${jeniskelamin}</td>
-              <td>${alamatasal}</td>
-              <td>${asalsekolah}</td>
-            </tr>
-          `;
-          });
-
-          // Tampilkan data di tabel
-          document.querySelector("#data-table").innerHTML = html;
-        } catch (error) {
-          console.error(error);
-        }
-      };
-
-      // Muat data ketika halaman web dimuat
-      document.addEventListener("DOMContentLoaded", loadData);
-    </script>
   </body>
 </html>
